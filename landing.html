@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AgroPredict — Tecnología que hace crecer al campo tucumano</title>
-<meta name="description" content="Agricultura de precisión en Tucumán: drones multiespectrales, sensores IoT e inteligencia artificial para monitorear cultivos, detectar plagas a tiempo y decidir con datos.">
+<title>AgroPredict · Azahar — Agricultura de precisión para el citrus tucumano</title>
+<meta name="description" content="Azahar, la plataforma de AgroPredict, combina imágenes de dron, sensores de suelo y conocimiento agronómico del citrus para decirte qué atender hoy en tu finca, hectárea por hectárea. Programa de fincas piloto en Tucumán.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -20,34 +20,259 @@
       <span class="bt"><strong>AgroPredict</strong><span>Agricultura de precisión</span></span>
     </a>
     <nav class="nav-links" id="menu">
+      <a href="#azahar">Azahar</a>
+      <a href="#como">Cómo funciona</a>
+      <a href="#proveedores">Proveedores</a>
       <a href="#quienes">Quiénes somos</a>
-      <a href="#clientes">Clientes</a>
-      <a href="#servicios">Servicios</a>
-      <a href="#socios">Nuestros socios</a>
-      <a href="#contacto">Contacto</a>
+      <a href="#faq">Preguntas</a>
+      <a href="#contacto" class="btn btn-primary nav-mobile-cta">Pedí tu diagnóstico</a>
     </nav>
-    <a href="#contacto" class="btn btn-primary nav-cta">Vuelo de diagnóstico</a>
-    <button class="burger" id="burger" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+    <a href="#contacto" class="btn btn-primary nav-cta">Pedí tu diagnóstico</a>
+    <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
   </div>
 </header>
 
 <!-- HERO -->
 <section class="hero" id="top" style="padding:0">
-  <div class="hero-bg"><img src="assets/img/hero-bg.jpg" alt="Campo con cultivos en hileras al pie de las sierras tucumanas"></div>
+  <div class="hero-bg"><img src="assets/img/hero-bg.jpg" alt="Cultivo en hileras al pie de las sierras"></div>
   <div class="scan"></div>
   <div class="wrap hero-inner">
-    <span class="eyebrow hero-eyebrow">Tucumán · Drones · IoT · Inteligencia artificial</span>
-    <h1>Tecnología que hace crecer al <em>campo tucumano</em></h1>
-    <p class="lead">Transformamos la inspección visual manual en decisiones basadas en datos. Drones multiespectrales, sensores IoT y modelos de IA que detectan plagas y estrés hídrico antes de que se vean a simple vista.</p>
+    <span class="pill"><span class="dot g"></span>Programa de fincas piloto abierto</span>
+    <span class="eyebrow hero-eyebrow">Agricultura de precisión para citrus · Tucumán</span>
+    <h1>Sabé qué atender hoy en tu finca, <em>hectárea por hectárea</em></h1>
+    <p class="lead">Azahar, la plataforma de AgroPredict, combina imágenes de dron, sensores de suelo y conocimiento agronómico del citrus para convertir datos en tareas concretas. No necesitás tener drones: la captura la coordinamos con proveedores especializados.</p>
     <div class="hero-actions">
-      <a href="#contacto" class="btn btn-primary">Solicitar un vuelo de diagnóstico →</a>
-      <a href="#servicios" class="btn btn-ghost">Ver servicios</a>
+      <a href="#contacto" class="btn btn-primary">Pedí tu diagnóstico →</a>
+      <a href="#azahar" class="btn btn-ghost">Conocé Azahar</a>
     </div>
-    <div class="telemetry" aria-hidden="true">
-      <div class="cell"><div class="k">Finca monitoreada</div><div class="v">FT-04</div></div>
-      <div class="cell"><div class="k">Índice NDVI</div><div class="v"><span class="dot g"></span>0.78</div></div>
-      <div class="cell"><div class="k">Estrés hídrico</div><div class="v"><span class="dot y"></span>Bajo</div></div>
-      <div class="cell"><div class="k">Coordenadas</div><div class="v" style="font-size:15px">-26.85, -65.20</div></div>
+    <div class="telemetry-wrap">
+      <div class="telemetry-tag">Vista demo de Azahar</div>
+      <div class="telemetry" aria-hidden="true">
+        <div class="cell"><div class="k">Establecimiento</div><div class="v" style="font-size:15px">Finca Santa Lucía · Monteros</div></div>
+        <div class="cell"><div class="k">Salud integral</div><div class="v"><span class="dot g"></span>78/100</div></div>
+        <div class="cell"><div class="k">Riesgo psílido</div><div class="v"><span class="dot y"></span>Moderado</div></div>
+        <div class="cell"><div class="k">Tareas de hoy</div><div class="v">3</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEMA -->
+<section id="problema">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">El problema</span>
+      <h2>En el campo, cuando se ve, ya es tarde</h2>
+      <p>En el citrus tucumano el monitoreo sanitario y del vigor se sigue haciendo a pie. Mientras tanto, el software agropecuario de la provincia se ocupa casi solo de la gestión administrativa y contable.</p>
+    </div>
+    <div class="prob-grid">
+      <div class="prob">
+        <div class="n">01</div>
+        <h3>Monitoreo a pie</h3>
+        <p>Los muestreos manuales son lentos, caros y cubren solo una parte de la finca.</p>
+      </div>
+      <div class="prob">
+        <div class="n">02</div>
+        <h3>Detección tardía</h3>
+        <p>Cuando el estrés hídrico o una anomalía en la hoja se ven a simple vista, la pérdida ya ocurrió.</p>
+      </div>
+      <div class="prob">
+        <div class="n">03</div>
+        <h3>Aplicaciones a ciegas</h3>
+        <p>Sin saber dónde está el problema, se termina aplicando de más, en un cultivo con enfermedades graves como el HLB.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AZAHAR -->
+<section id="azahar">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Azahar</span>
+      <h2>De los datos a la tarea del día</h2>
+      <p>Azahar arma una grilla de una hectárea sobre tus lotes y compara cada hectárea con un lote sano de la misma especie y edad. Así un lote joven no aparece como enfermo solo porque tiene menos follaje.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc"><div class="ndvi"></div>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M4 6l1 1 2-2M4 12l1 1 2-2M4 18l1 1 2-2"/></svg></div>
+        <div class="idx">01 · Tareas de hoy</div>
+        <h3>Qué hacer, dónde y cómo</h3>
+        <p>Una lista corta, ordenada por urgencia y en lenguaje simple, con «Ver en el mapa» y «Cómo hacerlo» en cada tarea.</p>
+      </div>
+      <div class="svc"><div class="ndvi"></div>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="1.5"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg></div>
+        <div class="idx">02 · Mapa por hectárea</div>
+        <h3>Salud, agua y riesgo</h3>
+        <p>Capas simples para el productor e índices técnicos (NDVI, NDRE, NDMI) para el asesor, sobre mapa satelital, híbrido o de relieve.</p>
+      </div>
+      <div class="svc"><div class="ndvi"></div>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M12 8v5M12 16v.5"/></svg></div>
+        <div class="idx">03 · Sanidad</div>
+        <h3>Riesgo de 8 plagas y enfermedades</h3>
+        <p>Psílido del HLB, mancha negra, cancrosis, mosca de los frutos, ácaros, Phytophthora y minador. Ante una clorosis compatible con HLB, te indica revisar y notificar a SENASA.</p>
+      </div>
+      <div class="svc"><div class="ndvi"></div>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3c3.5 4.5 6 7.6 6 10.5A6 6 0 0 1 6 13.5C6 10.6 8.5 7.5 12 3z"/></svg></div>
+        <div class="idx">04 · Riego</div>
+        <h3>Cuánta agua y dónde</h3>
+        <p>Humedad de suelo a 30 y 60 cm frente al umbral del cultivo, y la lámina a reponer en milímetros.</p>
+      </div>
+      <div class="svc"><div class="ndvi"></div>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="13" r="7"/><path d="M12 6c0-2 1-3 3-3M12 10v3l2 2"/></svg></div>
+        <div class="idx">05 · Cosecha</div>
+        <h3>Madurez y toneladas</h3>
+        <p>Lotes listos, fecha estimada de madurez, toneladas esperadas y registro de muestreos para planificar cuadrillas y empaque.</p>
+      </div>
+      <div class="svc"><div class="ndvi"></div>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="4" width="18" height="14" rx="1.5"/><path d="M3 9h18M8 4v14"/></svg></div>
+        <div class="idx">06 · Cartera y datos</div>
+        <h3>Para el asesor técnico</h3>
+        <p>Comparación de todos los establecimientos de tus clientes y exportación de zonas de manejo (shapefile), grilla (GeoJSON) y tabla (CSV).</p>
+      </div>
+    </div>
+    <div class="metrics">
+      <div class="metric"><div class="n">1<span> ha</span></div><div class="l">unidad mínima de análisis: el nivel en el que el productor puede actuar</div></div>
+      <div class="metric"><div class="n">8</div><div class="l">plagas y enfermedades del citrus modeladas con clima, etapa del cultivo y variedad</div></div>
+      <div class="metric"><div class="n">0–100</div><div class="l">índice de salud integral que combina vigor, clorofila y agua en la hoja</div></div>
+    </div>
+    <div class="status-note">
+      <span class="status-tag">Estado: piloto</span>
+      <p>Hoy Azahar funciona en modo demostración sobre lotes reales de Monteros y Famaillá, con datos de vuelo y de sensores simulados. En el programa piloto lo conectamos a imágenes y sensores reales: está diseñado para que cambie solo la fuente de datos.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CÓMO FUNCIONA -->
+<section id="como">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Cómo funciona</span>
+      <h2>Vos ponés la finca. El resto lo coordinamos</h2>
+      <p>AgroPredict es una empresa de software. No necesitás invertir en equipos: los datos del campo llegan por uno de dos caminos.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="sn">1</div><h3>Captura</h3><p>Vuelo con dron multiespectral y nodos de sensores de suelo y clima en tus lotes.</p></div>
+      <div class="step"><div class="sn">2</div><h3>Análisis</h3><p>Azahar calcula índices por hectárea y los cruza con reglas agronómicas propias del citrus.</p></div>
+      <div class="step"><div class="sn">3</div><h3>Decisión</h3><p>Recibís las tareas del día, y nuestro ingeniero agrónomo valida a campo las alertas críticas.</p></div>
+    </div>
+    <div class="paths">
+      <div class="path">
+        <div class="path-k">Camino A</div>
+        <h3>¿Ya tenés dron o sensores? Traé tus datos</h3>
+        <p>Cargás en Azahar tus imágenes multiespectrales y las lecturas de tus sensores (CSV). Contratás solo la suscripción.</p>
+      </div>
+      <div class="path path-main">
+        <div class="path-k">Camino B · el más común</div>
+        <h3>¿No tenés equipo? Lo coordinamos nosotros</h3>
+        <p>Armamos un único paquete de puesta en marcha con:</p>
+        <ul class="ticks">
+          <li>vuelo de mapeo con un proveedor aliado,</li>
+          <li>instalación de sensores,</li>
+          <li>alta de tus lotes en Azahar,</li>
+          <li>validación a campo y capacitación.</li>
+        </ul>
+        <p>Un solo interlocutor y una sola propuesta.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CÓMO EMPEZAR -->
+<section id="empezar">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Cómo empezar</span>
+      <h2>Primero te mostramos qué pasa en tu finca</h2>
+      <p>No publicamos precios porque cada finca es distinta: superficie, cantidad de lotes, ubicación y si ya contás con equipo propio. Empezamos con un diagnóstico y, si te sirve, armamos la propuesta.</p>
+    </div>
+    <div class="offer">
+      <div class="off">
+        <div class="off-n">01</div>
+        <h3>Diagnóstico inicial</h3>
+        <p>Relevamos una muestra de tu finca, generamos el reporte de Azahar y nuestro agrónomo lo recorre con vos. Si ya tenés datos, lo hacemos con ellos.</p>
+        <span class="off-tag">Condiciones de piloto</span>
+      </div>
+      <div class="off">
+        <div class="off-n">02</div>
+        <h3>Puesta en marcha</h3>
+        <p>Todo el setup inicial con precio integrado: vuelo de mapeo, sensores, alta de lotes y capacitación. Si contratás, el diagnóstico se descuenta.</p>
+        <span class="off-tag">Solo si no tenés equipo propio</span>
+      </div>
+      <div class="off">
+        <div class="off-n">03</div>
+        <h3>Suscripción a Azahar</h3>
+        <p>Acceso a la plataforma para vos y tu asesor, con soporte y asesoramiento agronómico incluido.</p>
+        <span class="off-tag">Asesoramiento incluido</span>
+      </div>
+    </div>
+    <div class="center-cta"><a href="#contacto" class="btn btn-dark">Pedí tu diagnóstico →</a></div>
+  </div>
+</section>
+
+<!-- PROVEEDORES -->
+<section id="proveedores">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Proveedores</span>
+      <h2>Una red de captura especializada, coordinada por AgroPredict</h2>
+      <p>En Tucumán todavía no hay empresas dedicadas a relevar cultivos con drones. Por eso trabajamos con proveedores que ya lo hacen, bajo un mismo protocolo de vuelo y de entrega de datos.</p>
+    </div>
+    <div class="prov-main">
+      <div class="prov-main-head">
+        <div class="badge-lg">AR</div>
+        <div>
+          <div class="role">Proveedor principal · Mendoza</div>
+          <h3>Arevanta</h3>
+        </div>
+        <span class="status-tag">Convenio en gestión</span>
+      </div>
+      <p>Empresa de servicios agrícolas con drones: mapeo multiespectral, monitoreo de cultivos y fumigación de precisión, con equipo propio (DJI Mavic 3 Multispectral y DJI Agras) e ingenieros agrónomos. Su servicio de captura y Azahar se complementan: ellos generan las imágenes y nosotros las convertimos en decisiones.</p>
+      <p class="muted-s">Para acortar la distancia organizamos campañas por zona, agrupando fincas del pedemonte tucumano en una misma ventana de fechas.</p>
+    </div>
+    <div class="soc-grid">
+      <div class="soc">
+        <div class="badge">PL</div>
+        <div class="role">Contratación por campaña</div>
+        <h3>Pilotos de drones acreditados de la región</h3>
+        <p>Operadores locales que vuelan con nuestro protocolo cuando no conviene trasladar un equipo desde otra provincia.</p>
+      </div>
+      <div class="soc">
+        <div class="badge">IoT</div>
+        <div class="role">Hardware e instalación</div>
+        <h3>Proveedores de sensores y estaciones</h3>
+        <p>Nodos de humedad de suelo y clima, instalados por técnicos contratados por obra. En evaluación: el sensor de humedad B01 desarrollado por INTA.</p>
+      </div>
+      <div class="soc">
+        <div class="badge">VOS</div>
+        <div class="role">Equipo propio</div>
+        <h3>El propio productor</h3>
+        <p>Si ya tenés dron multiespectral o sensores, tus datos entran a Azahar igual que los de cualquier proveedor.</p>
+      </div>
+    </div>
+    <div class="join">
+      <div>
+        <h3>¿Brindás servicios con drones o sensores en el NOA?</h3>
+        <p>Sumate a la red de proveedores de AgroPredict.</p>
+      </div>
+      <a href="#contacto" class="btn btn-primary" data-perfil="Proveedor de drones o sensores">Quiero sumarme →</a>
+    </div>
+  </div>
+</section>
+
+<!-- CLIENTES -->
+<section id="clientes">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Para quién</span>
+      <h2>Hecho para el citrus tucumano</h2>
+      <p>Limón, naranja, mandarina y pomelo. Empezamos por el cultivo donde detectar a tiempo vale más.</p>
+    </div>
+    <div class="cli-grid">
+      <div class="cli"><div class="tag">Citricultura</div><h3>Productores citrícolas</h3><p>Saber qué lotes necesitan riego, dónde hay un foco sanitario y cuándo cosechar, sin recorrer todo a ciegas.</p></div>
+      <div class="cli"><div class="tag">Asesoramiento</div><h3>Asesores y consultoras</h3><p>Seguir los establecimientos de varios clientes desde un solo lugar y priorizar recorridas.</p></div>
+      <div class="cli"><div class="tag">Agroempresas</div><h3>Empresas citrícolas y empaques</h3><p>Información objetiva por hectárea para planificar insumos, cuadrillas y logística de cosecha.</p></div>
+      <div class="cli cli-soon"><div class="tag">Próximamente</div><h3>Otras economías regionales</h3><p>Cuando validemos el modelo en citrus, lo vamos a llevar a otros cultivos de la región.</p></div>
     </div>
   </div>
 </section>
@@ -57,18 +282,18 @@
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow">Quiénes somos</span>
-      <h2>Una empresa tucumana de base tecnológica, cerca del productor</h2>
+      <h2>Una startup tucumana de software para el agro</h2>
     </div>
     <div class="about-grid">
       <div class="about-copy">
-        <p>AgroPredict desarrolla software para <strong>agricultura de precisión</strong>. Usamos drones, sensores IoT e inteligencia artificial para monitorear cultivos y llevar a los productores de la inspección visual manual a una gestión basada en datos reales, mapas de calor y pronósticos de rinde.</p>
-        <p>Nacimos en Tucumán y trabajamos junto a instituciones locales como la EEAOC y el Clúster Tecnológico. Esa <strong>cercanía con el productor</strong> y el soporte técnico en terreno son nuestro diferencial frente a las consultoras externas.</p>
-        <p>Entregamos software funcional y confiable con metodologías ágiles, para que quienes trabajan el campo no se queden atrás en los periodos de mayor actividad fitosanitaria.</p>
+        <p>AgroPredict es una <strong>Sociedad por Acciones Simplificada en formación</strong>, con base en San Miguel de Tucumán. Desarrollamos <strong>Azahar</strong> para llevar la agricultura de precisión al productor citrícola: de la inspección visual a decisiones basadas en datos.</p>
+        <p>Nos enfocamos en el software y en la <strong>cercanía con el productor</strong>. La captura de datos la coordinamos con proveedores especializados, y un ingeniero agrónomo acompaña cada diagnóstico en el terreno.</p>
+        <p>Estamos en <strong>etapa de piloto</strong>: el producto funciona y buscamos las primeras fincas para validarlo a campo con datos reales.</p>
       </div>
       <div class="mv">
         <div class="card">
           <h3>Misión</h3>
-          <p>Brindar herramientas tecnológicas accesibles al productor tucumano para mejorar el control de sus cultivos con drones y sensores, facilitando la detección temprana de problemas y optimizando el uso de recursos.</p>
+          <p>Brindar herramientas tecnológicas accesibles al productor tucumano para mejorar el control de sus cultivos mediante la agricultura de precisión, facilitando la detección temprana de problemas y optimizando el uso de recursos.</p>
         </div>
         <div class="card">
           <h3>Visión</h3>
@@ -76,107 +301,86 @@
         </div>
       </div>
     </div>
-    <div class="metrics">
-      <div class="metric"><div class="n">90<span>%</span></div><div class="l">de las decisiones del cliente respaldadas por nuestros pronósticos</div></div>
-      <div class="metric"><div class="n">3<span> meses</span></div><div class="l">al MVP funcional, con frameworks abiertos y arquitectura en la nube</div></div>
-      <div class="metric"><div class="n">24<span>/7</span></div><div class="l">de monitoreo continuo con datos de drones y sensores en tiempo real</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- CLIENTES -->
-<section id="clientes">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow">A quién apuntamos</span>
-      <h2>Pensado para quienes producen en Tucumán</h2>
-      <p>Trabajamos con productores y empresas agrícolas de las economías regionales del NOA que buscan aumentar la productividad y cuidar sus insumos con evidencia, no con conjeturas.</p>
-    </div>
-    <div class="cli-grid">
-      <div class="cli"><div class="tag">Citricultura</div><h3>Productores citrícolas</h3><p>Detección temprana de plagas y estrés en limón y cítricos, el motor exportador de la provincia.</p></div>
-      <div class="cli"><div class="tag">Caña de azúcar</div><h3>Ingenios y cañeros</h3><p>Monitoreo de grandes superficies y control de estrés hídrico en plena zafra.</p></div>
-      <div class="cli"><div class="tag">Granos y hortalizas</div><h3>Fincas mixtas</h3><p>Mapas de rinde y alertas para optimizar riego, fertilización y aplicaciones.</p></div>
-      <div class="cli"><div class="tag">Agroempresas</div><h3>Empresas agrícolas</h3><p>Dashboards y reportes semanales para equipos que gestionan varias fincas a la vez.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICIOS -->
-<section id="servicios">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow">Servicios</span>
-      <h2>Del vuelo a la decisión, todo con evidencia</h2>
-      <p>Capturamos, procesamos y traducimos los datos del campo en información que el productor puede usar desde una tablet, en la oficina o a pie de finca.</p>
-    </div>
-    <div class="svc-grid">
-      <div class="svc"><div class="ndvi"></div>
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3v6M5 8l7 4 7-4M4 14l8 4 8-4"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/></svg></div>
-        <div class="idx">01 · Captura</div>
-        <h3>Vuelos con drones multiespectrales</h3>
-        <p>Relevamiento aéreo de alta precisión para generar bancos de imágenes que alimentan el análisis y el entrenamiento de la IA.</p>
-      </div>
-      <div class="svc"><div class="ndvi"></div>
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 20V10M9 20V4M14 20v-7M19 20V8"/></svg></div>
-        <div class="idx">02 · Terreno</div>
-        <h3>Sensores IoT en tiempo real</h3>
-        <p>Instalación y calibración de sensores de humedad y temperatura que envían datos continuos al sistema de alertas.</p>
-      </div>
-      <div class="svc"><div class="ndvi"></div>
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="3.2"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M6 6l2 2M16 16l2 2M18 6l-2 2M8 16l-2 2"/></svg></div>
-        <div class="idx">03 · Inteligencia</div>
-        <h3>IA para detección temprana</h3>
-        <p>Modelos de visión artificial que identifican plagas y estrés hídrico antes de que sean visibles, con validación cruzada en terreno.</p>
-      </div>
-      <div class="svc"><div class="ndvi"></div>
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="4" width="18" height="14" rx="1.5"/><path d="M3 9h18M8 4v14"/></svg></div>
-        <div class="idx">04 · Visualización</div>
-        <h3>Mapas de calor y dashboards</h3>
-        <p>Interfaces simples, optimizadas para tablets en el campo, con mapas de calor y reportes críticos semanales.</p>
-      </div>
-      <div class="svc"><div class="ndvi"></div>
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></div>
-        <div class="idx">05 · Confianza</div>
-        <h3>Alertas y pronósticos de rinde</h3>
-        <p>Notificaciones push y pronósticos que integran datos de la EEAOC y estaciones meteorológicas para decidir a tiempo.</p>
-      </div>
-      <div class="svc"><div class="ndvi"></div>
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2v4M12 2C8 6 8 9 12 12c4-3 4-6 0-10z"/><path d="M4 20c2-4 5-6 8-6s6 2 8 6"/></svg></div>
-        <div class="idx">06 · Prueba</div>
-        <h3>Vuelo de diagnóstico</h3>
-        <p>Un relevamiento a bajo costo que demuestra el valor del reporte antes de contratar el servicio completo.</p>
+    <div class="eco">
+      <div class="eco-head">Ecosistema con el que buscamos trabajar</div>
+      <div class="soc-grid">
+        <div class="soc">
+          <div class="badge">EEA</div>
+          <div class="role">Objetivo · validación técnica</div>
+          <h3>EEAOC — Estación Experimental Obispo Colombres</h3>
+          <p>Queremos participar de sus jornadas técnicas e incorporar datos de referencia para mejorar la precisión de nuestros modelos.</p>
+        </div>
+        <div class="soc">
+          <div class="badge">CT</div>
+          <div class="role">Objetivo · membresía</div>
+          <h3>Clúster Tecnológico Tucumán</h3>
+          <p>Estamos trabajando en la formalización y los estándares de calidad necesarios para sumarnos como empresa de base tecnológica.</p>
+        </div>
+        <div class="soc">
+          <div class="badge">UTN</div>
+          <div class="role">Origen del proyecto</div>
+          <h3>UTN — Facultad Regional Tucumán</h3>
+          <p>AgroPredict nació como proyecto de Ingeniería en Sistemas de Información, y ese vínculo es nuestra fuente de talento.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SOCIOS -->
-<section id="socios" style="background:var(--paper);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)">
+<!-- HOJA DE RUTA -->
+<section id="ruta">
   <div class="wrap">
     <div class="sec-head">
-      <span class="eyebrow">Nuestros socios</span>
-      <h2>Respaldados por el ecosistema tecnológico y agroindustrial de la provincia</h2>
-      <p>Las alianzas locales nos dan validación, conocimiento del terreno y cercanía real con quienes producen.</p>
+      <span class="eyebrow">Hoja de ruta</span>
+      <h2>Dónde estamos y hacia dónde vamos</h2>
     </div>
-    <div class="soc-grid">
-      <div class="soc">
-        <div class="badge">CT</div>
-        <div class="role">Ecosistema tecnológico</div>
-        <h3>Clúster Tecnológico Tucumán</h3>
-        <p>Respaldo institucional y alianzas comerciales con empresas de base tecnológica de la provincia.</p>
+    <div class="road">
+      <div class="phase done">
+        <div class="ph-s">Hecho</div>
+        <h3>Base</h3>
+        <p>Definición de la empresa y MVP de Azahar sobre lotes reales con datos simulados.</p>
       </div>
-      <div class="soc">
-        <div class="badge">UTN</div>
-        <div class="role">Academia e innovación</div>
-        <h3>Universidad Tecnológica Nacional — FRT</h3>
-        <p>Vínculo con talento en ingeniería y desarrollo, y marco académico para la formación del equipo.</p>
+      <div class="phase now">
+        <div class="ph-s">En curso</div>
+        <h3>Piloto</h3>
+        <p>Convenio con Arevanta, primeras fincas piloto, imágenes y sensores reales, y validación cruzada a campo.</p>
       </div>
-      <div class="soc">
-        <div class="badge">EEA</div>
-        <div class="role">Ciencia agroindustrial</div>
-        <h3>EEAOC — Estación Experimental Obispo Colombres</h3>
-        <p>Datos, normativas y validación técnica del sector para mejorar la precisión de nuestros modelos.</p>
+      <div class="phase">
+        <div class="ph-s">Próximo</div>
+        <h3>Lanzamiento</h3>
+        <p>Suscripciones, imágenes satelitales automáticas, alertas al celular, pronóstico a 7 días y app de recorrida.</p>
       </div>
+      <div class="phase soon">
+        <div class="ph-s">Próximamente</div>
+        <h3>Escalar</h3>
+        <p>Flota propia de drones, otras economías regionales y modelos de IA entrenados con imágenes de fincas tucumanas.</p>
+      </div>
+    </div>
+    <div class="goals">
+      <div class="goal"><span>Meta</span>5 empresas agrícolas tucumanas en los primeros 6 meses de operación</div>
+      <div class="goal"><span>Meta</span>Que Azahar respalde el 90 % de las decisiones de cada cliente</div>
+      <div class="goal"><span>Meta</span>Membresía en el Clúster Tecnológico Tucumán</div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Preguntas frecuentes</span>
+      <h2>Lo que nos suelen preguntar</h2>
+    </div>
+    <div class="faq">
+      <details><summary>¿Necesito tener un dron?</summary><p>No. Si ya tenés dron multiespectral o sensores, cargás tus datos. Si no, coordinamos la captura con proveedores aliados dentro del paquete de puesta en marcha.</p></details>
+      <details><summary>¿Quién hace los vuelos?</summary><p>Proveedores especializados, en primer lugar Arevanta (convenio en gestión), y pilotos acreditados de la región que trabajan con nuestro protocolo. Vos hablás solo con AgroPredict.</p></details>
+      <details><summary>¿Cuánto cuesta?</summary><p>Depende de la superficie, la cantidad de lotes y si ya tenés equipo. Por eso empezamos con un diagnóstico y después armamos una propuesta con precio integrado.</p></details>
+      <details><summary>¿Azahar detecta el HLB?</summary><p>No lo diagnostica. Detecta una pérdida de clorofila localizada, compatible con HLB, y te indica revisar las plantas y, si hay síntomas, notificar a SENASA, porque es una enfermedad de denuncia obligatoria.</p></details>
+      <details><summary>¿En qué se diferencian de otras plataformas como Auravant?</summary><p>Usamos el detalle del dron y no solo imagen satelital, nos especializamos en citrus, te damos tareas concretas en lugar de mapas para interpretar e incluimos un agrónomo que valida a campo.</p></details>
+      <details><summary>¿Funciona en fincas sin señal?</summary><p>Sí. Las imágenes se descargan en el campo y se procesan después, y Azahar puede usarse sin conexión. Lo único que necesita internet es el mapa de fondo.</p></details>
+      <details><summary>¿De quién son los datos?</summary><p>Del productor. Cada usuario ve solo lo suyo y puede exportar toda su información cuando quiera.</p></details>
+      <details><summary>¿Por qué una hectárea y no cada planta?</summary><p>Porque es el nivel en el que se puede actuar, como regar un sector o revisar un foco, y mantiene el sistema liviano.</p></details>
+      <details><summary>¿Ya están operando?</summary><p>Estamos en etapa de piloto: Azahar funciona y buscamos las primeras fincas para validarlo a campo con datos reales.</p></details>
     </div>
   </div>
 </section>
@@ -187,12 +391,12 @@
     <div class="contact-grid">
       <div>
         <span class="eyebrow">Contacto</span>
-        <h2>Pedí tu vuelo de diagnóstico</h2>
-        <p class="lead">Contanos sobre tu finca y coordinamos un relevamiento para mostrarte, con datos reales, qué está pasando en tus cultivos.</p>
+        <h2>Pedí tu diagnóstico</h2>
+        <p class="lead">Contanos sobre tu finca y te proponemos un diagnóstico inicial para mostrarte, con datos, qué está pasando en tus lotes. Si sos proveedor de servicios con drones o sensores, también escribinos.</p>
         <div class="contact-list">
           <div class="row"><div class="k">Email</div><div class="val">contacto@agropredict.com.ar</div></div>
-          <div class="row"><div class="k">Zona</div><div class="val">San Miguel de Tucumán y alrededores, Argentina</div></div>
-          <div class="row"><div class="k">Horario</div><div class="val">Lunes a viernes, 9 a 18 h</div></div>
+          <div class="row"><div class="k">Zona</div><div class="val">Pedemonte citrícola tucumano: Famaillá, Monteros, Lules, Tafí Viejo, Burruyacú</div></div>
+          <div class="row"><div class="k">Base</div><div class="val">San Miguel de Tucumán, Argentina</div></div>
         </div>
       </div>
       <form class="form" id="contactForm" novalidate>
@@ -204,19 +408,46 @@
           <label for="email">Email</label>
           <input id="email" name="email" type="email" placeholder="nombre@correo.com" required>
         </div>
-        <div class="field">
-          <label for="cultivo">Cultivo principal</label>
-          <select id="cultivo" name="cultivo">
-            <option>Citrus / limón</option>
-            <option>Caña de azúcar</option>
-            <option>Granos</option>
-            <option>Hortalizas</option>
-            <option>Otro</option>
-          </select>
+        <div class="field-row">
+          <div class="field">
+            <label for="perfil">Perfil</label>
+            <select id="perfil" name="perfil">
+              <option>Productor citrícola</option>
+              <option>Asesor técnico / consultora</option>
+              <option>Empresa citrícola / empaque</option>
+              <option>Proveedor de drones o sensores</option>
+              <option>Otro</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="especie">Especie principal</label>
+            <select id="especie" name="especie">
+              <option>Limón</option>
+              <option>Naranja</option>
+              <option>Mandarina</option>
+              <option>Pomelo</option>
+              <option>Otro cultivo (próximamente)</option>
+            </select>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="equipo">¿Tenés dron o sensores?</label>
+            <select id="equipo" name="equipo">
+              <option>No, necesito la captura</option>
+              <option>Tengo dron multiespectral</option>
+              <option>Tengo sensores</option>
+              <option>Tengo ambos</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="superficie">Superficie aprox. (ha)</label>
+            <input id="superficie" name="superficie" type="number" min="0" placeholder="Ej.: 120">
+          </div>
         </div>
         <div class="field">
-          <label for="mensaje">¿Qué querés monitorear?</label>
-          <textarea id="mensaje" name="mensaje" placeholder="Contanos sobre tu finca: superficie, ubicación y qué te preocupa."></textarea>
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" placeholder="Ubicación de la finca, cantidad de lotes y qué te preocupa."></textarea>
         </div>
         <button type="submit" class="btn btn-primary">Enviar consulta →</button>
         <p class="form-note" id="formNote">Te respondemos dentro de las 48 h hábiles.</p>
@@ -233,13 +464,14 @@
       <strong>AgroPredict</strong>
     </div>
     <nav class="ft-links">
+      <a href="#azahar">Azahar</a>
+      <a href="#como">Cómo funciona</a>
+      <a href="#proveedores">Proveedores</a>
       <a href="#quienes">Quiénes somos</a>
-      <a href="#clientes">Clientes</a>
-      <a href="#servicios">Servicios</a>
-      <a href="#socios">Socios</a>
+      <a href="#faq">Preguntas</a>
       <a href="#contacto">Contacto</a>
     </nav>
-    <div class="ft-copy">© 2026 AgroPredict · Agricultura de precisión · San Miguel de Tucumán, Argentina · Tecnología que hace crecer al campo tucumano.</div>
+    <div class="ft-copy">© 2026 AgroPredict S.A.S. (en formación) · Azahar es un producto de AgroPredict · San Miguel de Tucumán, Argentina · Proyecto en etapa de piloto, desarrollado en el marco del Trabajo Final Integrador de Ingeniería en Sistemas de Información, UTN FRT.</div>
   </div>
 </footer>
 
