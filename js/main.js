@@ -27,3 +27,44 @@
     note.style.color='#6FA23C';
     form.reset();
   });
+
+  // Hoja de ruta: flor de Azahar interactiva
+  const petals=document.querySelectorAll('#ruta .petal');
+  const tabs=document.querySelectorAll('#ruta .petal-tab');
+  const titleEl=document.getElementById('rutaTitle');
+  const descEl=document.getElementById('rutaDesc');
+  const coreNum=document.getElementById('flowerCoreNum');
+
+  if(petals.length&&titleEl&&descEl){
+    const activatePhase=idx=>{
+      const target=petals[idx];
+      if(!target)return;
+      petals.forEach((p,i)=>{
+        const active=i===idx;
+        p.classList.toggle('is-active',active);
+        p.setAttribute('aria-pressed',String(active));
+      });
+      tabs.forEach((t,i)=>{
+        t.classList.toggle('is-active',i===idx);
+        t.setAttribute('aria-selected',String(i===idx));
+      });
+      const num=String(idx+1).padStart(2,'0');
+      titleEl.textContent=target.dataset.title;
+      descEl.textContent=target.dataset.desc;
+      if(coreNum)coreNum.textContent=num;
+    };
+
+    petals.forEach((petal,idx)=>{
+      petal.addEventListener('mouseenter',()=>activatePhase(idx));
+      petal.addEventListener('focus',()=>activatePhase(idx));
+      petal.addEventListener('click',()=>activatePhase(idx));
+      petal.addEventListener('keydown',e=>{
+        if(e.key==='Enter'||e.key===' '){e.preventDefault();activatePhase(idx);}
+      });
+    });
+
+    tabs.forEach((tab,idx)=>{
+      tab.addEventListener('mouseenter',()=>activatePhase(idx));
+      tab.addEventListener('click',()=>activatePhase(idx));
+    });
+  }
